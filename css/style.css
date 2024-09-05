@@ -299,13 +299,11 @@ h3.my-profession
     max-width: 40%;
     text-align: center;
     position: relative;
-    transform: translateX(60px);
 }
 .home-img::after
 {
     content: '';
     position: absolute;
-    transform: translateX(60px);
     height: 80px;
     width: 80px;
     border-bottom: 10px solid var(--skin-color);
@@ -317,7 +315,6 @@ h3.my-profession
 {
     content: '';
     position: absolute;
-    transform: translateX(-60px);
     height: 80px;
     width: 80px;
     border-top: 10px solid var(--skin-color);
@@ -470,4 +467,60 @@ h3.my-profession
     border-radius: 10px;
     width: 100%;
     position: relative;
+}
+.about .about-content .timeline .timeline-item
+{
+    position: relative;
+    padding-left: 37px;
+    padding-bottom: 50px;
+}
+.about .about-content .timeline .timeline-item:last-child
+{
+    padding-bottom: 0;
+}
+.about .about-content .timeline .timeline-item::before
+{
+    content: '';
+    width: 1px;
+    position: absolute;
+    height: 100%;
+    left: 7px;
+    top: 0;
+    background-color: var(--skin-color);
+}
+.about .about-content .timeline .circle-dot
+{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    background-color: var(--skin-color);
+}
+.about .about-content .timeline .timeline-date
+{
+    font-weight: 400;
+    font-size: 14px;
+    margin-bottom: 12px;
+    color: var(--text-black-700);
+}
+.about .about-content .timeline .timeline-date .fa
+{
+    margin-right: 5px;
+}
+.about .about-content .timeline .timeline-title
+{
+    font-weight: 700;
+    font-size: 18px;
+    margin-bottom: 15px;
+    text-transform: capitalize;
+    color: var(--text-black-900);
+}
+.about .about-content .timeline .timeline-text
+{
+    line-height: 25px;
+    font-size: 16px;
+    text-align: justify;
+    color: var(--text-black-700);
 }
