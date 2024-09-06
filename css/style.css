@@ -723,7 +723,7 @@ h3.my-profession
   }
   
   .h1-custom {
-    color: #88B04B;
+    color: var(--skin-color);
     font-family: "Nunito Sans", "Helvetica Neue", sans-serif;
     font-weight: 900;
     font-size: 40px;
@@ -738,7 +738,7 @@ h3.my-profession
   }
   
   .checkmark-custom {
-    color: #9ABC66;
+    color: var(--skin-color);
     font-size: 100px;
     line-height: 200px;
     margin-left: -15px;
@@ -760,4 +760,3 @@ h3.my-profession
     background: #F8FAF5;
     margin: 0 auto;
   }
-  
