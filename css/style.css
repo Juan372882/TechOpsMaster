@@ -713,9 +713,7 @@ h3.my-profession
     padding: 0 50px;
     cursor: pointer;
 }
-
 /* success */
-
 .body-custom {
     text-align: center;
     padding: 40px 0;
@@ -760,3 +758,4 @@ h3.my-profession
     background: #F8FAF5;
     margin: 0 auto;
   }
+/* Responsive Start */
