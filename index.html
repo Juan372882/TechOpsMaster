@@ -443,7 +443,7 @@
             <h4 class="contact-sub-title padd-15">I'M VERY RESPONSIVE TO MESSAGES</h4>
             <!-- ==== Contact Form ==== -->
              <div class="row">
-              <form action="https://api.web3forms.com/submit" class="contact-form padd-15" method="POST">
+              <form action="https://api.web3forms.com/submit" id="form" class="contact-form padd-15" method="POST">
 
                 <input type="hidden" name="access_key" value="fd7a7541-d3fe-4f9d-9e02-2755390b92a0">
 
@@ -509,6 +509,12 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.1.0/typed.umd.js" integrity="sha512-+2pW8xXU/rNr7VS+H62aqapfRpqFwnSQh9ap6THjsm41AxgA0MhFRtfrABS+Lx2KHJn82UOrnBKhjZOXpom2LQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="js/script.js"></script>
   <script src="js/style-switcher.js"></script>
+  <script>
+    window.onload = function() {
+        // Reset the form fields when the page loads
+        document.getElementById("form").reset();
+    };
+</script>
 </body>
 
 </html>

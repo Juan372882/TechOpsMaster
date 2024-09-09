@@ -90,8 +90,3 @@ const nav = document.querySelector(".nav"),
             allSection[i].classList.toggle("open");
         }
     }
-    document.querySelector('form').onsubmit = e => {
-        e.target.submit();
-        e.target.reset();
-        return false;
-     };
