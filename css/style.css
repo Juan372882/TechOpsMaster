@@ -878,3 +878,70 @@ h3.my-profession
         max-width: 100%;
     }
 }
+
+.gallery-modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.9);
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .gallery-modal.active {
+    display: flex;
+    animation: fadeIn 0.3s ease-in-out;
+  }
+  
+  .gallery-img {
+    max-width: 90%;
+    max-height: 80vh;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .close-btn {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    font-size: 40px;
+    color: #fff;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  .gallery-nav {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 30px;
+    transform: translateY(-50%);
+  }
+  
+  .gallery-nav .prev,
+  .gallery-nav .next {
+    font-size: 50px;
+    color: #fff;
+    cursor: pointer;
+    user-select: none;
+    transition: color 0.3s;
+  }
+  
+  .gallery-nav .prev:hover,
+  .gallery-nav .next:hover {
+    color: var(--skin-color);
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+

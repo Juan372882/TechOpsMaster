@@ -345,7 +345,7 @@
              <div class="portfolio-item padd-15">
               <div class="portfolio-item-inner shadow-dark">
                 <div class="portfolio-img">
-                  <img src="images/portfolio/food.png" alt="">
+                  <img src="images/portfolio/food.png" alt="" class="portfolio-image" data-index="0">
                 </div>
               </div>
              </div>
@@ -354,7 +354,7 @@
              <div class="portfolio-item padd-15">
               <div class="portfolio-item-inner shadow-dark">
                 <div class="portfolio-img">
-                  <img src="images/portfolio/sample1.jpg" alt="">
+                  <img src="images/portfolio/sample1.jpg" alt="" class="portfolio-image" data-index="1">
                 </div>
               </div>
              </div>
@@ -363,7 +363,7 @@
              <div class="portfolio-item padd-15">
               <div class="portfolio-item-inner shadow-dark">
                 <div class="portfolio-img">
-                  <img src="images/portfolio/sample1.jpg" alt="">
+                  <img src="images/portfolio/sample1.jpg" alt="" class="portfolio-image" data-index="2">
                 </div>
               </div>
              </div>
@@ -372,7 +372,7 @@
              <div class="portfolio-item padd-15">
               <div class="portfolio-item-inner shadow-dark">
                 <div class="portfolio-img">
-                  <img src="images/portfolio/sample1.jpg" alt="">
+                  <img src="images/portfolio/sample1.jpg" alt="" class="portfolio-image" data-index="3">
                 </div>
               </div>
              </div>
@@ -381,7 +381,7 @@
              <div class="portfolio-item padd-15">
               <div class="portfolio-item-inner shadow-dark">
                 <div class="portfolio-img">
-                  <img src="images/portfolio/sample1.jpg" alt="">
+                  <img src="images/portfolio/sample1.jpg" alt="" class="portfolio-image" data-index="4">
                 </div>
               </div>
              </div>
@@ -390,7 +390,7 @@
              <div class="portfolio-item padd-15">
               <div class="portfolio-item-inner shadow-dark">
                 <div class="portfolio-img">
-                  <img src="images/portfolio/sample1.jpg" alt="">
+                  <img src="images/portfolio/sample1.jpg" alt="" class="portfolio-image" data-index="5">
                 </div>
               </div>
              </div>
@@ -399,7 +399,17 @@
         </div>
        </section>
        <!-- ==== Portfolio Section End ==== -->
-        <!-- ==== Contact Section Start ==== -->
+       <!-- === Gallery Section Start === -->
+       <div class="gallery-modal" id="galleryModal">
+        <span class="close-btn" onclick="closeGallery()">&times;</span>
+        <img class="gallery-img" id="galleryImg" src="" alt="">
+        <div class="gallery-nav">
+          <span class="prev" onclick="changeImage(-1)">&#10094;</span>
+          <span class="next" onclick="changeImage(1)">&#10095;</span>
+        </div>
+      </div>
+        <!-- === Gallery Section End === --> 
+       <!-- ==== Contact Section Start ==== -->
          <section class="contact section" id="contact">
           <div class="container">
             <div class="row">

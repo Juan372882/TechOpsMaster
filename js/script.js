@@ -90,3 +90,63 @@ const nav = document.querySelector(".nav"),
             allSection[i].classList.toggle("open");
         }
     }
+
+/* ========================== Gallery Animation ========================== */
+  const images = Array.from(document.querySelectorAll('.portfolio-image'));
+  const modal = document.getElementById('galleryModal');
+  const modalImg = document.getElementById('galleryImg');
+  let currentIndex = 0;
+
+  images.forEach((img, index) => {
+    img.addEventListener('click', () => {
+      openGallery(index);
+    });
+  });
+
+  function openGallery(index) {
+    currentIndex = index;
+    modal.classList.add('active');
+    modalImg.src = images[currentIndex].src;
+  }
+
+  function closeGallery() {
+    modal.classList.remove('active');
+  }
+
+  function changeImage(direction) {
+    currentIndex += direction;
+    if (currentIndex < 0) currentIndex = images.length - 1;
+    if (currentIndex >= images.length) currentIndex = 0;
+    modalImg.src = images[currentIndex].src;
+  }
+
+  // Cerrar con tecla ESC
+  window.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeGallery();
+    if (e.key === 'ArrowLeft') changeImage(-1);
+    if (e.key === 'ArrowRight') changeImage(1);
+  });
+
+/* ========================== Mobile Animation ========================== */
+  // Variables para swipe
+  let startX = 0;
+  let endX = 0;
+
+  modal.addEventListener('touchstart', (e) => {
+    startX = e.changedTouches[0].screenX;
+  });
+
+  modal.addEventListener('touchend', (e) => {
+    endX = e.changedTouches[0].screenX;
+    handleSwipe();
+  });
+
+  function handleSwipe() {
+    const threshold = 50; // sensibilidad mínima para detectar swipe
+
+    if (endX - startX > threshold) {
+      changeImage(-1); // swipe a la derecha → imagen anterior
+    } else if (startX - endX > threshold) {
+      changeImage(1); // swipe a la izquierda → imagen siguiente
+    }
+  }
